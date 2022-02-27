@@ -1,4 +1,6 @@
 class PortofoliosController < ApplicationController
+  # before_action :set_blog, only: %i[ show edit update destroy ]
+
   def index
     @portofolio_items = Portofolio.all
   end
@@ -15,6 +17,22 @@ class PortofoliosController < ApplicationController
         format.html { redirect_to portofolios_path, notice: "Your portofolio item is now live." }
       else
         format.html { render :new, status: :unprocessable_entity }
+      end
+    end
+  end
+
+  def edit
+    @portofolio_item = Portofolio.find(params[:id])
+  end
+
+  def update
+    @portofolio_item = Portofolio.find(params[:id])
+    
+    respond_to do |format|
+      if @portofolio_item.update(params.require(:portofolio).permit(:title, :subtitle, :body))
+        format.html { redirect_to portofolios_path, notice: "Your portofolio item was successfully updated." }
+      else
+        format.html { render :edit, status: :unprocessable_entity }
       end
     end
   end
