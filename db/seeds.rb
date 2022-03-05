@@ -22,24 +22,41 @@ puts "10 blog post created."
 end
 puts "5 skill created."
 
-8.times do |portofolio_item|
-  Portofolio.create!(
-    title: "Portofolio title #{portofolio_item}",
+8.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title #{portfolio_item}",
     subtitle: "Ruby on Rails",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/300x200",
   )
 end
-1.times do |portofolio_item|
-  Portofolio.create!(
-    title: "Portofolio title #{portofolio_item}",
+1.times do |portfolio_item|
+  Portfolio.create!(
+    title: "Portfolio title #{portfolio_item}",
     subtitle: "Angular",
     body: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.",
     main_image: "https://via.placeholder.com/600x400",
     thumb_image: "https://via.placeholder.com/300x200",
   )
 end
-puts "9 portofolio created."
+puts "9 portfolio created."
 
+# 3.times do |technology|
+#   Technology.create!(
+#     name: "Technogy #{technology}"
+#     portfolio_id: Portfolio.last.id
+#   )
+# end
 
+3.times do |technology|
+  Portfolio.last.technologies.create!(name: "Technogy #{technology}")
+end
+
+# 3.times do |technology|
+#   @technology = Technology.new(name: "Technogy #{technology}")
+#   Portfolio.last.technologies << @technology
+  
+# end
+
+puts "3 technology created."
