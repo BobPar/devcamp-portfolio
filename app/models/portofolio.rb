@@ -1,2 +1,0 @@
-class Portofolio < ApplicationRecord
-end
