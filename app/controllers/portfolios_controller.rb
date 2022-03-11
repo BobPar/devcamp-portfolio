@@ -1,5 +1,5 @@
 class PortfoliosController < ApplicationController
-  # before_action :set_blog, only: %i[ show edit update destroy ]
+  before_action :set_portfolio, only: %i[ show edit update destroy ]
   layout "portfolio"
 
   def index
@@ -7,7 +7,6 @@ class PortfoliosController < ApplicationController
   end
 
   def show
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def new
@@ -28,11 +27,10 @@ class PortfoliosController < ApplicationController
   end
 
   def edit
-    @portfolio_item = Portfolio.find(params[:id])
   end
 
   def update
-    @portfolio_item = Portfolio.find(params[:id])
+    
     
     respond_to do |format|
       if @portfolio_item.update(portfolio_params)
@@ -44,7 +42,7 @@ class PortfoliosController < ApplicationController
   end
 
   def destroy
-    @portfolio_item = Portfolio.find(params[:id])
+    
 
     @portfolio_item.destroy
     respond_to do |format|
@@ -59,5 +57,8 @@ class PortfoliosController < ApplicationController
                                       technologies_attributes: [:name]
                                      )
   end
-  
+
+  def set_portfolio
+    @portfolio_item = Portfolio.find(params[:id])
+  end
 end
