@@ -29,7 +29,11 @@ gem 'devise', '~> 4.8', '>= 4.8.1'
 gem 'bootstrap', '~> 5.1.3'
 gem 'jquery-rails'
 gem 'petergate', '~> 3.0'
+# gem 'view_tool_katsu', git: 'https://github.com/jordanhudgens/devcamp_view_tool'
+# https://github.com/BobPar/DevcampViewTool/tree/main/creating-a-rugy-gem/view_tool_katsu
+# DevcampViewTool/creating-a-rugy-gem/view_tool_katsu/
 
+gem 'devcamp_view_tool', '~> 0.1.0'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'

@@ -38,13 +38,14 @@ body {
   -ms-flex-pack: center;
   -webkit-box-pack: center;
   justify-content: center;
+  text-align: center; // 手動追加
   color: #fff;
   text-shadow: 0 0.05rem 0.1rem rgba(0, 0, 0, 0.5);
   box-shadow: inset 0 0 5rem rgba(0, 0, 0, 0.5);
 }
 
 .cover-container {
-  max-width: 42em;
+  max-width: 55em;
 }
 
 /*
