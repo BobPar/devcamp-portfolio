@@ -169,7 +169,18 @@ body {
 }
 
 // オリジナル
-.form-group {
-  margin-top: 1rem;
-  margin-bottom: 1rem;
+// .form-group {
+//   margin-top: 1rem;
+//   margin-bottom: 1rem;
+// }
+
+.register-text {
+  text-align: right;
+}
+
+.login .card {
+  width: 22rem;
+  margin: 0 auto;
+  float: none;
+  margin-bottom: 20px;
 }
