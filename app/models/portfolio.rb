@@ -18,6 +18,6 @@ class Portfolio < ApplicationRecord
   end
 
   def self.by_position
-    order(postion: :asc)
+    order(position: :asc)
   end
 end
