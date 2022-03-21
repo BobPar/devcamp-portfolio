@@ -29,15 +29,18 @@ class PortfoliosController < ApplicationController
 
   def create
     @portfolio_item = Portfolio.new(portfolio_params)
+    # @technology = @portfolio_item.technologies.new(id: params[:id])
 
+    # byebug
     respond_to do |format|
-      if @portfolio_item.save
+      if @portfolio_item.save!
         format.html { redirect_to portfolios_path, notice: "Your portfolio item is now live." }
       else
         format.html { render :new, status: :unprocessable_entity }
       end
     end
   end
+
 
   def edit
   end
@@ -65,7 +68,9 @@ class PortfoliosController < ApplicationController
 
   private def portfolio_params
     params.require(:portfolio).permit(:title, 
-                                      :subtitle, 
+                                      :subtitle,
+                                      :main_image,
+                                      :thumb_image, 
                                       :body, 
                                       technologies_attributes: [:name]
                                      )
