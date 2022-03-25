@@ -54,9 +54,19 @@ module ApplicationHelper
     nav_links.html_safe
   end
 
-
-
   def active?(path)
     "active" if current_page? path
+  end
+
+  def alerts
+    alerts = (flash[:notice] || flash[:error] || flash[:alert])
+    
+    if alerts
+      alert_generator(alerts)
+    end
+  end
+
+  def alert_generator(msg)
+    js add_gritter(msg, title: "Katsuhiro Sugada Portfolio", :sticky => true)
   end
 end
