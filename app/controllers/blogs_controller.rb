@@ -15,6 +15,10 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1 or /blogs/1.json
   def show
+    @blog = Blog.includes(:comments).friendly.find(params[:id])
+    @comment = Comment.new
+
+    @page_title = @blog.title
   end
 
   # GET /blogs/new
