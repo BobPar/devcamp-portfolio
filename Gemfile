@@ -35,6 +35,7 @@ gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
 gem 'twitter', '~> 6.1'
+gem 'redis', '~> 3.3', '>= 3.3.3'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
