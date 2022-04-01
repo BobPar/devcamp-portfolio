@@ -10,7 +10,8 @@ class BlogsController < ApplicationController
     if logged_in?(:site_admin)
       @blogs = Blog.all.recent.page(params[:page]).per(5)
     else
-      @blogs = Blog.published.recent.page(params[:page]).per(5)
+      # @blogs = Blog.published.recent.page(params[:page]).per(5)
+      @blogs = Blog.recent.page(params[:page]).per(5)
     end
     # @blogs = Blog.special_blogs
     # @blogs = Blog.featured_blogs
@@ -19,6 +20,10 @@ class BlogsController < ApplicationController
 
   # GET /blogs/1 or /blogs/1.json
   def show
+    # @blog = Blog.includes(:comments).friendly.find(params[:id])
+    # @comment = Comment.new
+
+    @page_title = @blog.title
   end
 
   # GET /blogs/new
