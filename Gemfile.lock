@@ -200,6 +200,7 @@ GEM
     rb-fsevent (0.11.1)
     rb-inotify (0.10.1)
       ffi (~> 1.0)
+    redcarpet (3.5.1)
     responders (3.0.1)
       actionpack (>= 5.0)
       railties (>= 5.0)
@@ -266,6 +267,7 @@ DEPENDENCIES
   carrierwave (~> 1.0)
   carrierwave-aws (~> 1.0, >= 1.0.2)
   cocoon (~> 1.2, >= 1.2.9)
+  coderay (~> 1.1, >= 1.1.1)
   coffee-rails (~> 4.2)
   devcamp_view_tool (~> 0.1.0)
   devise (~> 4.8, >= 4.8.1)
@@ -284,6 +286,7 @@ DEPENDENCIES
   pry-byebug
   puma (~> 3.11)
   rails (~> 5.2.6, >= 5.2.6.2)
+  redcarpet (~> 3.4)
   sass-rails (~> 5.0)
   spring
   spring-watcher-listen (~> 2.0.0)

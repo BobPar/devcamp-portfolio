@@ -34,6 +34,8 @@ gem 'carrierwave-aws', '~> 1.0', '>= 1.0.2'
 gem 'dotenv-rails', '~> 2.1', '>= 2.1.2'
 gem 'cocoon', '~> 1.2', '>= 1.2.9'
 gem 'gritter', '~> 1.2'
+gem 'redcarpet', '~> 3.4'
+gem 'coderay', '~> 1.1', '>= 1.1.1'
 
 # Use Redis adapter to run Action Cable in production
 # gem 'redis', '~> 4.0'
