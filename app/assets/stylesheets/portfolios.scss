@@ -4,6 +4,23 @@
 
 body {
   min-height: 75rem; /* Can be removed; just added for demo purposes */
+  font-family: 'Roboto Slab', sans-serif;
+}
+
+h1,
+.h1,
+h2,
+.h2,
+h3,
+.h3,
+h4,
+.h4,
+h5,
+.h5,
+h6,
+.h6 {
+  // font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: 'Roboto Slab', serif;
 }
 
 .navbar {
@@ -47,7 +64,7 @@ body {
 
 .card {
   float: left;
-  width: 33.333%;
+  width: 100%;
   padding: 0.75rem;
   margin-bottom: 2rem;
   border: 0;
